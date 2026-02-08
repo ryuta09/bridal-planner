@@ -14,6 +14,7 @@ import { SEO } from "astro-seo";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <SEO
       title={title}
       description="簡単なプロフィールと自分がアウトプットしているブログを一覧として掲載しているポートフォリオです。お問い合わせも受け付けてます。"
@@ -46,6 +47,8 @@ import { SEO } from "astro-seo";
       <slot />
     </main>
     <Footer />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="module" src="/assets/js/index.js"></script>
+    
   </body>
 </html>

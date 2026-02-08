@@ -1,0 +1,95 @@
+@use '../global' as g;
+
+.c-title {
+  display: flex;
+  flex-direction: column;
+  @include g.mq(lg) {
+    flex-direction: row;
+  }
+  &__main {
+    position: relative;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    line-height: 1;
+    z-index: 2;
+    @include g.mq(lg) {
+      font-size: 3rem;
+      padding-right: 2.4rem;
+      border-right: .1rem solid g.$accent;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: -0.9rem;
+      left: -0.9rem;
+      width: 2rem;
+      height: 2rem;
+      background: g.$accent;
+      z-index: -1;
+      @include g.mq(lg) {
+        top: -1.3rem;
+        left: -1.6rem;
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+  }
+
+  &__sub {
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    position: relative;
+    @include g.mq(lg) {
+      padding-left: 2.4rem;
+      font-size: 2rem;
+      margin-top: 0;
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -0.4rem;
+      left: 0;
+      width: 4.4rem;
+      height: .1rem;
+      background: g.$accent;
+      @include g.mq(lg) {
+      display: none;
+      }
+    }
+  }
+
+  &--subheading {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.6rem;
+    padding-left: 0.8rem;
+    & > h3 {
+      position: relative;
+      letter-spacing: 0.1em;
+      color: g.$accent;
+      @include g.mq(md) {
+        font-size: 2.4rem;
+      }
+      &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: -1.6rem;
+          width: 0.8rem;
+          height: 0.8rem;
+          background: g.$grayRight;
+      }
+    }
+
+    & > p {
+      @include g.mq(md) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,167 @@
+@use '../global' as g;
+
+.p-recent {
+  background: g.$accent-sub;
+  margin-top: 11.7rem;
+  padding: 6.4rem 0 2.1rem 0;
+  @include g.mq(md) {
+    margin-top: 12.6rem;
+    padding: 6.4rem 0;
+  }
+}
+
+/* プランナー
+------------------------------------*/
+.p-recent__planner {
+  margin-top: 2.4rem;
+  
+  &-subheading {
+    margin-top: 2.4rem;
+    @include g.mq(md) {
+      margin-top: 6.4rem;
+    }
+  }
+
+  &-inner {
+
+  }
+
+  &-item {
+    background: g.$white;
+  }
+
+  &-thumbnail {
+    width: 11.6rem;
+    @include g.mq(md) {
+      width: 16rem;
+      aspect-ratio: 1 / 1;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-body {
+    width: calc(100% - 11.6rem);
+        padding: 1.1rem 2rem 0.9rem 0;
+    @include g.mq(md) {
+      width: calc(100% - 16rem);
+      padding: 1.5rem 4rem 2rem 0;
+    }
+  }
+
+  &-name {
+    position: relative;
+    padding-bottom: 0.7rem;
+
+    @include g.mq(md) {
+      padding-bottom: 0.8rem;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 19rem;
+      height: .1rem;
+      background: g.$gray;
+      @include g.mq(md) {
+        width: 26.1rem;
+      }
+    }
+  }
+  &-name-ja {
+    font-size: 1.8rem;
+    @include g.mq(md) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &-name-en {
+    font-size: 1.2rem;
+  }
+
+  &-position {
+    display: flex;
+    gap: .8rem;
+    margin-top: 1.1rem;
+    @include g.mq(md) {
+      margin-top: 2.4rem;
+    }
+  }
+
+  &-label {
+    & > span {
+      width: 4.6rem;
+      display: inline-block;
+      font-size: 1rem;
+      border: .1rem solid g.$accent;
+      text-align: center;
+      color: g.$accent;
+      padding: .4rem 0;
+    }
+  }
+
+  &-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 0.4rem;
+    width: calc(100% - 4.6rem);
+  }
+
+
+}
+
+/* swiperの設定
+------------------------------------*/
+.p-recent__planner {
+  overflow-x: hidden;
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    margin-left: 1.6rem;
+    gap: 2rem !important;
+    @include g.mq(md) {
+      gap: 4.8rem !important;
+      margin-left: 0;
+    }
+
+  }
+  .swiper-slide {
+    display: flex;
+    width: 37.1rem !important;
+    gap: .8rem !important;
+    @include g.mq(md) {
+      width: 49rem !important;
+      gap: 3.8rem !important;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+      display: flex;
+      width: 2.8rem;
+      height: 2.8rem;
+      background: rgba(g.$accent, 0.9);
+      border-radius: 50%;
+      color: g.$white; 
+      & > svg {
+        width: .7rem;
+        @include g.mq(md) {
+          width: 1rem;
+        }
+      }
+      @include g.mq(md) {
+        width: 4.4rem;
+        height: 4.4rem;
+      }
+      @include g.mq(2xl) {
+        display: none;
+      }
+  }
+}

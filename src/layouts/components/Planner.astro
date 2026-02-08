@@ -1,0 +1,128 @@
+<section class="p-recent__planner">
+  <div class="p-recent__planner-inner swiper">
+    <div class="p-recent__planner-items swiper-wrapper">
+
+      <div class="p-recent__planner-item swiper-slide">
+        <div class="p-recent__planner-thumbnail">
+          <img src="/assets/images/planner-2.webp" alt="">
+        </div>
+        <div class="p-recent__planner-body">
+          <div class="p-recent__planner-name">
+            <div class="p-recent__planner-name-ja">佐々木 結</div>
+            <div class="p-recent__planner-name-en">オリオンウェディング</div>
+          </div>
+          <div class="p-recent__planner-position">
+            <div class="p-recent__planner-label">
+              <span>エリア</span>
+            </div>
+            <div class="p-recent__planner-area">
+              <p>東京</p>
+              <p>神奈川</p>
+              <p>千葉</p>
+              <p>埼玉</p>
+              <p>長野</p>
+              <p>愛知</p>
+              <p>岡山</p>
+              <p>大阪</p>
+              <p>広島</p>
+              <p>福岡</p>
+              <p>沖縄</p>
+              <p>海外</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-recent__planner-item swiper-slide">
+        <div class="p-recent__planner-thumbnail">
+          <img src="/assets/images/planner-2.webp" alt="">
+        </div>
+        <div class="p-recent__planner-body">
+          <div class="p-recent__planner-name">
+            <div class="p-recent__planner-name-ja">鈴木 直子</div>
+            <div class="p-recent__planner-name-en">Orangewedding</div>
+          </div>
+          <div class="p-recent__planner-position">
+            <div class="p-recent__planner-label">
+              <span>エリア</span>
+            </div>
+            <div class="p-recent__planner-area">
+              <p>東京</p>
+              <p>神奈川</p>
+              <p>千葉</p>
+              <p>埼玉</p>
+              <p>長野</p>
+              <p>愛知</p>
+              <p>岡山</p>
+              <p>大阪</p>
+              <p>広島</p>
+              <p>福岡</p>
+              <p>沖縄</p>
+              <p>海外</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-recent__planner-item swiper-slide">
+        <div class="p-recent__planner-thumbnail">
+          <img src="/assets/images/planner-3.webp" alt="">
+        </div>
+        <div class="p-recent__planner-body">
+          <div class="p-recent__planner-name">
+            <div class="p-recent__planner-name-ja">加藤 美玲</div>
+            <div class="p-recent__planner-name-en">株式会社best wedding</div>
+          </div>
+          <div class="p-recent__planner-position">
+            <div class="p-recent__planner-label">
+              <span>エリア</span>
+            </div>
+            <div class="p-recent__planner-area">
+              <p>東京</p>
+              <p>神奈川</p>
+              <p>千葉</p>
+              <p>埼玉</p>
+              <p>長野</p>
+              <p>愛知</p>
+              <p>岡山</p>
+              <p>大阪</p>
+              <p>広島</p>
+              <p>福岡</p>
+              <p>沖縄</p>
+              <p>海外</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+
+  const swiper = new Swiper('.swiper', {
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 'auto', // PCでは自動幅
+        centeredSlides: true, 
+        initialSlide: 1, // 2枚目を中央に表示
+      }
+    }
+  });
+</script>

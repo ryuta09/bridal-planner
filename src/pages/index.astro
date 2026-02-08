@@ -1,8 +1,21 @@
 ---
 import Fv from '../layouts/Fv.astro';
 import Layout from '../layouts/Layout.astro';
+import Heading from '../layouts/components/Heading.astro';
+import Planner from '../layouts/components/Planner.astro';
+import SubHeading from '../layouts/components/SubHeading.astro';
 ---
 
-<Layout title="コーディング">
+<Layout title="ブライダルプランナーLP">
   <Fv />
+  <div class="p-recent">
+    <div class="l-container">
+      <Heading />
+      <div class="p-recent__planner-subheading">
+        <SubHeading />
+      </div>
+    </div>
+    <Planner  />
+
+  </div>
 </Layout>
